@@ -14,10 +14,27 @@ class RoundButton extends StatelessWidget{
         onPressed: action,
         style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
-          backgroundColor: Colors.black
+          backgroundColor: Colors.blue
         ),
         child: Text(text, style: const TextStyle(color: Colors.white),),
     );
+  }
+
+}
+
+class ImageButton extends StatelessWidget{
+  final Action action;
+  final String asset;
+
+
+  const ImageButton({super.key,required this.action, required this.asset});
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return IconButton(
+        onPressed: action,
+        icon: Image.asset(asset));
   }
 
 }

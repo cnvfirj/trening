@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trening/widgets/round_button.dart';
+import 'package:trening/widgets/dialog.dart';
+
+import 'buttons.dart';
 
 
 class MainWidget extends StatelessWidget{
@@ -27,8 +29,12 @@ class SignInWidget extends StatelessWidget{
           child: RoundButton(
               text: 'Sign In',
               action: (){
-                Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (context) => const SignOutWidget()));
+                print('!!!!!!!!!!!!!!!click');
+                showDialog(
+                    context: context,
+                    builder: (BuildContext context)=>const SignInDialog());
+                // Navigator.pushReplacement(
+                //     context, MaterialPageRoute(builder: (context) => const SignOutWidget()));
               }),
         ),
     );
