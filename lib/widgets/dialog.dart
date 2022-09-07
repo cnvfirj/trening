@@ -16,8 +16,7 @@ class SignInDialog extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Flexible(
-          child: ImageButton(
+    ImageButton(
               action: () {
                 Navigator.pushReplacement(
                     context,
@@ -26,9 +25,7 @@ class SignInDialog extends StatelessWidget {
                 // Navigator.of(context).pop();
               },
               asset: 'assets/images/sign_in_with_email_icon_3.jpg'),
-        ),
-        Flexible(
-          child: ImageButton(
+      ImageButton(
               action: () {
                 Navigator.pushReplacement(
                     context,
@@ -37,9 +34,7 @@ class SignInDialog extends StatelessWidget {
                 // Navigator.of(context).pop();
               },
               asset: 'assets/images/sign_in_with_google_icon_3.jpg'),
-        ),
-        Flexible(
-          child: ImageButton(
+       ImageButton(
               action: () {
                 Navigator.pushReplacement(
                     context,
@@ -48,7 +43,6 @@ class SignInDialog extends StatelessWidget {
                 // Navigator.of(context).pop();
               },
               asset: 'assets/images/sign_in_with_games_icon_3.jpg'),
-        ),
       ],
     ));
   }
