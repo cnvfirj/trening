@@ -16,11 +16,12 @@ class CubitUserData extends Cubit<String>{
   }
 }
 
+typedef ContextCallback = void Function(BuildContext context);
 class CubitStartWindow extends Cubit<void>{
   CubitStartWindow() : super(null);
 
   void signInMail(BuildContext context){
-
+    print('bloc mail');
     Navigator.pushReplacement(context,
         MaterialPageRoute(builder: (context) => const SignOutWidget()));
   }
