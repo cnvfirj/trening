@@ -3,11 +3,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:trening/firebase_options.dart';
 
-class ApplicationState extends ChangeNotifier{
+class ApplicationState {
 
-  ApplicationState(){
-    init();
-  }
+
 
 
   Future<void>init()async{
@@ -15,7 +13,9 @@ class ApplicationState extends ChangeNotifier{
       options: DefaultFirebaseOptions.currentPlatform
     );
     FirebaseAuth.instance.userChanges().listen((user) {
-
+         if(user!=null){
+            print('${user.email}');
+         }
     });
   }
 }
